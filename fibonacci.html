@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Fibonacci</title>
+</head>
+
+<body>
+	<h2>This example calls a function which calculate and returns a Fibonacci series:</h2>
+	<h1 id="Html_JavaScript_Test"></h1>
+</body>
+
+<script>
+	function f_Fibonacci( x ) {
+  		
+		var next = 1, previous = 0, temp = 0, serie = "";
+
+		while (x >= 0){
+			temp = next;
+			next = next + previous;
+			if ( previous > 0 ){
+				serie = serie + temp + ", ";
+			}
+			previous = temp;
+			x--;
+		}
+
+		return serie;
+	}
+	document.getElementById("Html_JavaScript_Test").innerHTML = f_Fibonacci(5);
+</script>
+
+</html>
